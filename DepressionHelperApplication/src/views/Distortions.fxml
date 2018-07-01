@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Accordion layoutX="54.0" layoutY="27.0" prefHeight="626.0" prefWidth="597.0" expandedPane="$firstPane">
+        <panes>
+          <TitledPane fx:id="firstPane" animated="false" text="ALL-OR-NOTHING THINKING">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-1.0" prefHeight="314.0" prefWidth="596.0" text="You see things in black-and-white categories. If your performance falls short of perfect, you see yourself as a total failure." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" text="OVERGENERALIZATION">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="314.0" prefWidth="596.0" text="You see a single negative event as a never-ending pattern of defeat." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" text="MENTAL FILTER">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="314.0" prefWidth="596.0" text="You pick out a single negative detail and dwell on it exclusively so that your vision of all reality becomes darkened, like the drop of ink that colors the entire beaker of water." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+          </TitledPane>
+            <TitledPane animated="false" text="DISQUALIFYING THE POSITIVE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="314.0" prefWidth="596.0" />
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="596.0" text="You reject positive experiences by insisting they &quot;don't count&quot; for some reason or other. In this way you can maintain a negative belief that is contradicted by your everyday experiences." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="357.0" prefWidth="621.0" text="JUMPING TO CONCLUSIONS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="619.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="596.0" text="You make a negative interpretation even though there are no definite facts that convincingly support your conclusion." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                        <Accordion layoutX="55.0" layoutY="128.0" prefHeight="148.0" prefWidth="502.0">
+                          <panes>
+                            <TitledPane animated="false" text="Mind Reading">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="98.0" prefWidth="503.0" text="You arbitrarily conclude that someone is reacting negatively to you, and you don't bother to check this out." textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="25.0" right="25.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                            </TitledPane>
+                            <TitledPane animated="false" text="The Fortune Teller Error">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="98.0" prefWidth="503.0" text="You anticipate that things will turn out badly, and you feel convinced that your prediction is an already-established fact." textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="25.0" right="25.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" text="MAGNIFICATION (CATASTROPHIZING) OR MINIMIZATION">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="596.0" text="You exaggerate the importance of things (such as your goof-up or someone else's achievement), or you inappropriately shrink things until they appear tiny (your own desirable qualities or the other fellow's imperfections). This is also called the &quot;binocular trick.&quot;" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" text="EMOTIONAL REASONING">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="596.0" text="You assume that your negative emotions necessarily reflect the way things really are: &quot;I feel it, therefore it must be true.&quot;" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" text="SHOULD STATEMENTS">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="314.0" prefWidth="596.0" text="You try to motivate yourself with shoulds and shouldn'ts, as if you had to be whipped and punished before you could be expected to do anything. &quot;Musts'&quot; and &quot;oughts&quot; are also offenders. The emotional consequence is guilt. When you direct should statements toward others, you feel anger, frustration, and resentment." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" text="LABELING AND MISLABELING">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="314.0" prefWidth="596.0" text="This is an extreme form of overgeneralization. Instead of describing your error, you attach a negative label to yourself: &quot;I'm a loser.&quot; When someone else's behavior rubs you the wrong way, you attach a negative label to him: &quot;He's a goddam louse.&quot; Mislabeling involves describing an event with language that is highly colored and emotionally loaded." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" text="PERSONALIZATION">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="314.0" prefWidth="596.0" text="You see yourself as the cause of some negative external event which in fact you were not primarily responsible for." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>
