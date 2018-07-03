@@ -16,10 +16,17 @@ public class MainController {
     @FXML
     private Button listOfDistortionsBtn;
     @FXML
+    private Button checklistBtn;
+    @FXML
     private AnchorPane contentAnchorPane;
     
     public void loadDistortionList(ActionEvent event) throws IOException{
         AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/Distortions.fxml"));
+        contentAnchorPane.getChildren().add(newLoadedPane);
+    }
+    
+    public void loadChecklist(ActionEvent event) throws IOException{
+        AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/Checklist.fxml"));
         contentAnchorPane.getChildren().add(newLoadedPane);
     }
 }

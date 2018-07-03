@@ -17,7 +17,7 @@
                   <Separator layoutX="21.0" layoutY="30.0" prefWidth="100.0" />
                   <Label alignment="CENTER" layoutX="56.0" layoutY="106.0" text="Tools" textAlignment="CENTER" />
                   <Separator layoutX="21.0" layoutY="123.0" prefWidth="100.0" />
-                  <Button layoutX="16.0" layoutY="140.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="110.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="checklistBtn" layoutX="16.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadChecklist" prefHeight="62.0" prefWidth="110.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true" />
                   <Button layoutX="16.0" layoutY="214.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="110.0" text="Distortion Thought Analysis" textAlignment="CENTER" wrapText="true" />
                </children>
             </AnchorPane>

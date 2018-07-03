@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="729.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChecklistController">
+   <children>
+      <Label layoutX="34.0" layoutY="23.0" prefHeight="82.0" prefWidth="439.0" text="Instructions: Select either 0 - 4 for each row to indicate how much you have experienced each symptom during the past week, including today. Please answer all 25 items." wrapText="true">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="497.0" layoutY="35.0" text="0 = Not at All">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="52.0" text="1 = Somewhat">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="69.0" text="2 = Moderately">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="86.0" text="3 = A Lot">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="103.0" text="4 = Extremely">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="34.0" layoutY="124.0" prefHeight="480.0" prefWidth="667.0">
+         <content>
+            <VBox prefHeight="677.0" prefWidth="653.0">
+               <children>
+                  <HBox id="checklist-grid-header" prefHeight="24.0" prefWidth="50.0" styleClass="checklist-border">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="683.0" text="Thoughts and Feelings">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-border" />
+                              <String fx:value="checklist-grid-head" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling sad or down in the dumps">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio1">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio1">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio1">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio1">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="2">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling unhappy or blue">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio2" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio2">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio2">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio2">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio2">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="3">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Crying spells or tearfulness">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio3" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio3">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio3">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio3">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio3">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="4">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling discouraged">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio4" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio4">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio4">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio4">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio4">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="5">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling hopeless">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio5" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio5">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio5">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio5">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio5">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="6">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Low self-esteem">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio6" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio6">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio6">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio6">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio6">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="7">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling worthless or inadequate">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio7" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio7">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio7">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio7">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio7">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="8">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Guilt or shame">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio8" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio8">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio8">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio8">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio8">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="9">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Criticizing yourself or blaming others">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio9" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio9">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio9">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio9">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio9">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="10">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Difficulty making decisions">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio10" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio10">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio10">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio10">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio10">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="50.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="683.0" text="Activities and Personal Relationships">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-border" />
+                              <String fx:value="checklist-grid-head" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-border" />
+                        <String fx:value="checklist-grid-row" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="11">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of interest in family, friends or colleagues">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio11" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio11">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio11">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio11">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio11">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="12">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Loneliness">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio12" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio12">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio12">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio12">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio12">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="13">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Spending less time with family or friends">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio13" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio13">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio13">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio13">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio13">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="14">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of motivation">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio14" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio14">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio14">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio14">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio14">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="15">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of interest in work or other activities">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio15" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio15">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio15">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio15">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio15">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="16">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Avoiding work or other activties">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio16" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio16">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio16">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio16">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio16">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="17">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of pleasure or satisfaction in life">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio17" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio17">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio17">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio17">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio17">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="50.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="683.0" text="Physical Symptoms">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-border" />
+                              <String fx:value="checklist-grid-head" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-border" />
+                        <String fx:value="checklist-grid-row" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="18">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling tired">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio18" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio18">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio18">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio18">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio18">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="19">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Difficulty sleeping or sleeping too much">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio19" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio19">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio19">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio19">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio19">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="653.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="20">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Decreased or increased appetite">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio20" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio20">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio20">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio20">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio20">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="21">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of interest in sex">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio21" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio21">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio21">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio21">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio21">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="22">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Worrying about your health">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio22" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio22">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio22">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio22">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio22">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="50.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="683.0" text="Suicidal Urges">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-border" />
+                              <String fx:value="checklist-grid-head" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-border" />
+                        <String fx:value="checklist-grid-row" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="23">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Do you have any suicidal thoughts?">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio23" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio23">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio23">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio23">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio23">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="666.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="24">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" text="Would you like to end your life?">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio24" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio24">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio24">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio24">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio24">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="checklist-grid-row" />
+                        <String fx:value="checklist-border" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="checklist-grid-footer" prefHeight="24.0" prefWidth="653.0" styleClass="checklist-border">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="42.0" text="25">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-number" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="280.0" styleClass="checklist-grid-cell" text="Do you have a plan for harming yourself?">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radio25" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="1" toggleGroup="$radio25">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="2" toggleGroup="$radio25">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="3" toggleGroup="$radio25">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" text="4" toggleGroup="$radio25">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="submitBtn" layoutX="648.0" layoutY="625.0" mnemonicParsing="false" onAction="#loadResults" text="Submit" />
+   </children>
+</AnchorPane>

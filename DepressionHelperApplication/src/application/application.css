@@ -3,3 +3,32 @@
     Author     : tyler
 */
 
+.checklist-grid-cell{
+    -fx-border-width: 0px 1px 0px 1px;
+}
+
+.checklist-grid-row{
+    -fx-border-width: 1px 2px 1px 0px;
+}
+
+.checklist-grid-number{
+    -fx-border-width: 0px 1px 0px 2px;
+}
+
+.checklist-grid-head{
+    -fx-border-width: 0px 0px 0px 2px;
+}
+
+.checklist-border{
+    -fx-border-style: solid;
+    -fx-border-color: black;
+}
+
+#checklist-grid-header{
+    -fx-border-width: 2px 2px 1px 0px;
+}
+
+#checklist-grid-footer{
+    -fx-border-width: 1px 2px 2px 0px;
+}
+
