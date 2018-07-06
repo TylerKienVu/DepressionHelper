@@ -3,11 +3,12 @@ package controllers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 
 /**
  *
@@ -67,25 +68,40 @@ public class ChecklistController {
     private ToggleGroup radio24;
     @FXML
     private ToggleGroup radio25;
+    @FXML
+    private AnchorPane checklistAnchorPane;
     
-    public void loadResults(ActionEvent event) throws IOException{
+    public void loadResults() throws IOException{
         ArrayList<ToggleGroup> radioButtons = new ArrayList<>(25);
         ToggleGroup[] radioList = new ToggleGroup[]{radio1,radio2,radio3,radio4,radio5,radio6,radio7,
         radio8,radio9,radio10,radio11,radio12,radio13,radio14,radio15,radio16,radio17,radio18,radio19,radio20,
         radio21,radio22,radio23,radio24,radio25};
         radioButtons.addAll(Arrays.asList(radioList));
         
-        int totalScore = 0;
-        for(ToggleGroup radio : radioButtons){
-            totalScore += getRadioButtonValue(radio.getSelectedToggle().toString());
-        }
+        int totalScore = getTotalScore(radioButtons);
+
         
-        System.out.println(totalScore);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ChecklistResults.fxml"));
+        AnchorPane resultPane = (AnchorPane) loader.load();
+        ChecklistResultsController resultController = loader.getController();
+        resultController.setLabels(totalScore);
+        
+        checklistAnchorPane.getChildren().clear();
+        checklistAnchorPane.getChildren().add(resultPane);
+        
     }
     
     private int getRadioButtonValue(String radioString){
         int indexOfSelectedValue = radioString.indexOf("'")+1;
         int selectedValue = Integer.parseInt(String.valueOf(radioString.charAt(indexOfSelectedValue)));
         return selectedValue;
+    }
+    
+    private int getTotalScore(ArrayList<ToggleGroup> radioButtons) {
+        int totalScore = 0;
+        for(ToggleGroup radio : radioButtons){
+            totalScore += getRadioButtonValue(radio.getSelectedToggle().toString());
+        }
+        return totalScore;
     }
 }
