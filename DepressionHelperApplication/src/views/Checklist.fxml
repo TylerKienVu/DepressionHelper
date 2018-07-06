@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="checklistAnchorPane" prefHeight="680.0" prefWidth="729.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChecklistController">
+<AnchorPane id="AnchorPane" fx:id="checklistAnchorPane" prefHeight="680.0" prefWidth="812.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChecklistController">
    <children>
       <Label layoutX="34.0" layoutY="23.0" prefHeight="82.0" prefWidth="439.0" text="Instructions: Select either 0 - 4 for each row to indicate how much you have experienced each symptom during the past week, including today. Please answer all 25 items." wrapText="true">
          <padding>
@@ -22,34 +22,34 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="497.0" layoutY="35.0" text="0 = Not at All">
+      <Label layoutX="701.0" layoutY="30.0" text="0 = Not at All">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="496.0" layoutY="52.0" text="1 = Somewhat">
+      <Label layoutX="700.0" layoutY="47.0" text="1 = Somewhat">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="496.0" layoutY="69.0" text="2 = Moderately">
+      <Label layoutX="700.0" layoutY="64.0" text="2 = Moderately">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="496.0" layoutY="86.0" text="3 = A Lot">
+      <Label layoutX="700.0" layoutY="81.0" text="3 = A Lot">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="496.0" layoutY="103.0" text="4 = Extremely">
+      <Label layoutX="700.0" layoutY="98.0" text="4 = Extremely">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ScrollPane hbarPolicy="NEVER" layoutX="34.0" layoutY="124.0" prefHeight="480.0" prefWidth="667.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="34.0" layoutY="124.0" prefHeight="480.0" prefWidth="752.0">
          <content>
-            <VBox prefHeight="677.0" prefWidth="653.0">
+            <VBox prefHeight="677.0" prefWidth="732.0">
                <children>
                   <HBox id="checklist-grid-header" prefHeight="24.0" prefWidth="50.0" styleClass="checklist-border">
                      <children>
@@ -78,7 +78,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling sad or down in the dumps">
+                        <Label prefHeight="21.0" prefWidth="393.0" text="Feeling sad or down in the dumps">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -132,7 +132,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling unhappy or blue">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Feeling unhappy or blue">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -186,7 +186,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Crying spells or tearfulness">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Crying spells or tearfulness">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -240,7 +240,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling discouraged">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Feeling discouraged">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -294,7 +294,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling hopeless">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Feeling hopeless">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -348,7 +348,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Low self-esteem">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Low self-esteem">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -402,7 +402,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling worthless or inadequate">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Feeling worthless or inadequate">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -456,7 +456,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Guilt or shame">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Guilt or shame">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -510,7 +510,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Criticizing yourself or blaming others">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Criticizing yourself or blaming others">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -564,7 +564,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Difficulty making decisions">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Difficulty making decisions">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -638,7 +638,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of interest in family, friends or colleagues">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Loss of interest in family, friends or colleagues">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -692,7 +692,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Loneliness">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Loneliness">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -746,7 +746,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Spending less time with family or friends">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Spending less time with family or friends">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -800,7 +800,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of motivation">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Loss of motivation">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -854,7 +854,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of interest in work or other activities">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Loss of interest in work or other activities">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -908,7 +908,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Avoiding work or other activties">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Avoiding work or other activties">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -962,7 +962,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of pleasure or satisfaction in life">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Loss of pleasure or satisfaction in life">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1036,7 +1036,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Feeling tired">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Feeling tired">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1090,7 +1090,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Difficulty sleeping or sleeping too much">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Difficulty sleeping or sleeping too much">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1144,7 +1144,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Decreased or increased appetite">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Decreased or increased appetite">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1198,7 +1198,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Loss of interest in sex">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Loss of interest in sex">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1252,7 +1252,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Worrying about your health">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Worrying about your health">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1326,7 +1326,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Do you have any suicidal thoughts?">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Do you have any suicidal thoughts?">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1380,7 +1380,7 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" text="Would you like to end your life?">
+                        <Label prefHeight="22.0" prefWidth="393.0" text="Would you like to end your life?">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -1434,10 +1434,14 @@
                               <String fx:value="checklist-border" />
                            </styleClass>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="280.0" styleClass="checklist-grid-cell" text="Do you have a plan for harming yourself?">
+                        <Label prefHeight="22.0" prefWidth="393.0" stylesheets="@../application/application.css" text="Do you have a plan for harming yourself?">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
+                           <styleClass>
+                              <String fx:value="checklist-grid-cell" />
+                              <String fx:value="checklist-border" />
+                           </styleClass>
                         </Label>
                         <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" selected="true" text="0">
                            <padding>
@@ -1473,6 +1477,6 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Button fx:id="submitBtn" layoutX="648.0" layoutY="625.0" mnemonicParsing="false" onAction="#loadResults" text="Submit" />
+      <Button fx:id="submitBtn" layoutX="718.0" layoutY="625.0" mnemonicParsing="false" onAction="#loadResults" text="Submit" />
    </children>
 </AnchorPane>

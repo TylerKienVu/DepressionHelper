@@ -3,6 +3,11 @@
     Author     : tyler
 */
 
+.root {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
 .checklist-grid-cell{
     -fx-border-width: 0px 1px 0px 1px;
 }

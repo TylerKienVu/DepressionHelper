@@ -18,23 +18,25 @@ public class MainController {
     @FXML
     private Button checklistBtn;
     @FXML
+    private Button distortionAnalysisBtn;
+    @FXML
     private AnchorPane contentAnchorPane;
     
-    public void loadDistortionList(ActionEvent event) throws IOException{
+    public void loadDistortionList() throws IOException{
+        contentAnchorPane.getChildren().clear();
         AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/Distortions.fxml"));
-        contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(newLoadedPane);
     }
     
-    public void loadChecklist(ActionEvent event) throws IOException{
+    public void loadChecklist() throws IOException{
+        contentAnchorPane.getChildren().clear();
         AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/Checklist.fxml"));
-        contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(newLoadedPane);
     }
     
-    public void loadChecklistResults() throws IOException{
-        AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/ChecklistResults.fxml"));
+    public void loadDistortionAnalysis() throws IOException{
         contentAnchorPane.getChildren().clear();
+        AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/DistortionAnalysis.fxml"));
         contentAnchorPane.getChildren().add(newLoadedPane);
     }
 }

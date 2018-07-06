@@ -5,19 +5,19 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="700.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="750.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
    <children>
-      <AnchorPane fx:id="buttonAnchorPane" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="151.0">
+      <AnchorPane fx:id="buttonAnchorPane" layoutX="14.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="680.0" prefWidth="174.0">
          <children>
-            <Button fx:id="listOfDistortionsBtn" layoutX="16.0" layoutY="42.0" mnemonicParsing="false" onAction="#loadDistortionList" prefHeight="27.0" prefWidth="110.0" text="List of Distortions" textAlignment="CENTER" wrapText="true" />
-            <Label alignment="CENTER" layoutX="44.0" layoutY="14.0" text="Resources" />
-            <Separator layoutX="21.0" layoutY="30.0" prefWidth="100.0" />
-            <Label alignment="CENTER" layoutX="56.0" layoutY="106.0" text="Tools" textAlignment="CENTER" />
-            <Separator layoutX="21.0" layoutY="123.0" prefWidth="100.0" />
-            <Button fx:id="checklistBtn" layoutX="16.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadChecklist" prefHeight="62.0" prefWidth="110.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true" />
-            <Button layoutX="16.0" layoutY="214.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="110.0" text="Distortion Thought Analysis" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="listOfDistortionsBtn" layoutX="13.0" layoutY="66.0" mnemonicParsing="false" onAction="#loadDistortionList" prefHeight="31.0" prefWidth="148.0" text="List of Distortions" textAlignment="CENTER" wrapText="true" />
+            <Label alignment="CENTER" layoutX="51.0" layoutY="28.0" text="Resources" />
+            <Separator layoutX="37.0" layoutY="54.0" prefWidth="100.0" />
+            <Label alignment="CENTER" layoutX="66.0" layoutY="127.0" text="Tools" textAlignment="CENTER" />
+            <Separator layoutX="37.0" layoutY="148.0" prefWidth="100.0" />
+            <Button fx:id="checklistBtn" layoutX="13.0" layoutY="164.0" mnemonicParsing="false" onAction="#loadChecklist" prefHeight="62.0" prefWidth="148.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="distortionAnalysisBtn" layoutX="13.0" layoutY="238.0" mnemonicParsing="false" onAction="#loadDistortionAnalysis" prefHeight="62.0" prefWidth="148.0" text="Distortion Thought Analysis" textAlignment="CENTER" wrapText="true" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="contentAnchorPane" layoutX="161.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="729.0" />
+      <AnchorPane fx:id="contentAnchorPane" layoutX="202.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="680.0" prefWidth="812.0" />
    </children>
 </AnchorPane>

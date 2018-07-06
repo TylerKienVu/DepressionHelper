@@ -77,16 +77,16 @@ public class ChecklistController {
         radio8,radio9,radio10,radio11,radio12,radio13,radio14,radio15,radio16,radio17,radio18,radio19,radio20,
         radio21,radio22,radio23,radio24,radio25};
         radioButtons.addAll(Arrays.asList(radioList));
+        checklistAnchorPane.getChildren().clear();
         
         int totalScore = getTotalScore(radioButtons);
-
+        
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ChecklistResults.fxml"));
         AnchorPane resultPane = (AnchorPane) loader.load();
         ChecklistResultsController resultController = loader.getController();
         resultController.setLabels(totalScore);
         
-        checklistAnchorPane.getChildren().clear();
         checklistAnchorPane.getChildren().add(resultPane);
         
     }
