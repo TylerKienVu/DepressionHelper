@@ -8,6 +8,14 @@
     -fx-faint-focus-color: transparent;
 }
 
+.text-area {
+    -fx-focus-color: blue;
+}
+
+.button {
+    -fx-focus-color: blue;
+}
+
 .checklist-grid-cell{
     -fx-border-width: 0px 1px 0px 1px;
 }

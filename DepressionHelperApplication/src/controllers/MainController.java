@@ -1,9 +1,13 @@
 package controllers;
 
 import java.io.IOException;
-import javafx.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
@@ -11,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author tyler
  */
-public class MainController {
+public class MainController implements Initializable{
     
     @FXML
     private Button listOfDistortionsBtn;
@@ -38,5 +42,20 @@ public class MainController {
         contentAnchorPane.getChildren().clear();
         AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/DistortionAnalysis.fxml"));
         contentAnchorPane.getChildren().add(newLoadedPane);
+    }
+    
+    public void loadDashboard() throws IOException{
+        contentAnchorPane.getChildren().clear();
+        AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/Dashboard.fxml"));
+        contentAnchorPane.getChildren().add(newLoadedPane);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            loadDashboard();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

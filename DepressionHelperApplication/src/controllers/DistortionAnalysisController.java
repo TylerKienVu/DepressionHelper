@@ -47,7 +47,7 @@ public class DistortionAnalysisController {
     }
     
     private void updateProfile(JournalEntry newEntry) {
-        File saveFile = new File("profile.xml");
+        File saveFile = ProfileUtility.getSaveFile();
         try {
             if(!saveFile.exists()) {
                 ProfileUtility.createProfile(saveFile);
