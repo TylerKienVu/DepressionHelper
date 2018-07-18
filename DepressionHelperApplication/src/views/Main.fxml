@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="750.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
    <children>
       <AnchorPane fx:id="buttonAnchorPane" layoutX="14.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="680.0" prefWidth="174.0">
          <children>
-            <Button fx:id="listOfDistortionsBtn" layoutX="13.0" layoutY="202.0" mnemonicParsing="false" onAction="#loadDistortionList" prefHeight="31.0" prefWidth="148.0" text="List of Distortions" textAlignment="CENTER" wrapText="true" />
-            <Label alignment="CENTER" layoutX="60.0" layoutY="159.0" text="Resources" />
-            <Separator layoutX="37.0" layoutY="187.0" prefWidth="100.0" />
-            <Label alignment="CENTER" layoutX="73.0" layoutY="290.0" text="Tools" textAlignment="CENTER" />
-            <Separator layoutX="37.0" layoutY="314.0" prefWidth="100.0" />
-            <Button fx:id="checklistBtn" layoutX="13.0" layoutY="329.0" mnemonicParsing="false" onAction="#loadChecklist" prefHeight="62.0" prefWidth="148.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true" />
-            <Button fx:id="distortionAnalysisBtn" layoutX="13.0" layoutY="403.0" mnemonicParsing="false" onAction="#loadDistortionAnalysis" prefHeight="62.0" prefWidth="148.0" text="Distortion Thought Analysis" textAlignment="CENTER" wrapText="true" />
-            <Button fx:id="dashboardBtn" layoutX="13.0" layoutY="71.0" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="31.0" prefWidth="148.0" text="Dashboard" textAlignment="CENTER" wrapText="true" />
-            <Label alignment="CENTER" layoutX="71.0" layoutY="30.0" text="Profile" />
-            <Separator layoutX="37.0" layoutY="56.0" prefWidth="100.0" />
-            <Separator layoutX="166.0" layoutY="2.0" orientation="VERTICAL" prefHeight="710.0" prefWidth="11.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="682.0" prefWidth="177.0">
+               <children>
+                  <Label alignment="CENTER" text="Profile">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="dashboardBtn" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="31.0" prefWidth="148.0" text="Dashboard" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="journalBtn" mnemonicParsing="false" onAction="#loadJournals" prefHeight="31.0" prefWidth="148.0" text="Journal Entries" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" text="Resources">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="listOfDistortionsBtn" mnemonicParsing="false" onAction="#loadDistortionList" prefHeight="31.0" prefWidth="148.0" text="List of Distortions" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" text="Tools" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="checklistBtn" mnemonicParsing="false" onAction="#loadChecklist" prefHeight="62.0" prefWidth="148.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="distortionAnalysisBtn" mnemonicParsing="false" onAction="#loadDistortionAnalysis" prefHeight="62.0" prefWidth="148.0" text="Distortion Thought Analysis" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="contentAnchorPane" layoutX="198.0" minHeight="0.0" minWidth="0.0" prefHeight="680.0" prefWidth="812.0" />
