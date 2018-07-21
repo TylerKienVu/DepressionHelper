@@ -82,6 +82,11 @@ public class ProfileUtility {
         return profile.getChecklistScores().getScores();
     }
     
+    public static List<JournalEntry> getJournalEntries() throws JAXBException {
+        UserProfile profile = extractProfile(getSaveFile());
+        return profile.getJournalEntries().getEntries();
+    }
+    
     private static void updateProfile(UserProfile profile, File saveFile) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(UserProfile.class);
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
