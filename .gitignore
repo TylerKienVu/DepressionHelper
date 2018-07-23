@@ -1,3 +1,6 @@
 /LoginFx/nbproject/private/
 /LoginFx/dist/
-/LoginFx/build/
+/LoginFx/build
+.classpath
+.project
+.settings/
