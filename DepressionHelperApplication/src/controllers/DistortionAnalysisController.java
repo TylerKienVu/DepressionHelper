@@ -6,11 +6,18 @@
 package controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Date;
+import java.util.ResourceBundle;
+
 import javax.xml.bind.JAXBException;
 import models.JournalEntry;
 import utility.ProfileUtility;
@@ -19,7 +26,7 @@ import utility.ProfileUtility;
  *
  * @author tyler
  */
-public class DistortionAnalysisController {
+public class DistortionAnalysisController implements Initializable{
     
     @FXML 
     private Button saveBtn;
@@ -29,16 +36,46 @@ public class DistortionAnalysisController {
     private TextArea distortionsText;
     @FXML
     private TextArea rationalText;
+    @FXML
+    private AnchorPane distortionAnalysisAnchorPane;
+    
+    private boolean editMode;
+    private Date saveDate;
+    
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		editMode = false;
+	}
     
     public void saveEntry() {
-        JournalEntry entry = createEntry();
+    	JournalEntry entry = createEntry();
         updateProfile(entry);
         clearEntry();
+        try {
+			loadJournalsView();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    
+    public void importJournal(JournalEntry entry) {
+    	automaticText.setText(entry.getAutoEntry());
+    	distortionsText.setText(entry.getDistortionEntry());
+    	rationalText.setText(entry.getRationalEntry());
+    	
+    	//enable editing mode
+    	editMode = true;
+    	saveDate = entry.getDate();
     }
     
     private JournalEntry createEntry() {
         JournalEntry entry = new JournalEntry();
-        entry.setDate(new Date());
+        if(editMode) {
+        	entry.setDate(saveDate);
+        }
+        else {
+        	entry.setDate(new Date());
+        }
         entry.setAutoEntry(automaticText.getText());
         entry.setDistortionEntry(distortionsText.getText());
         entry.setRationalEntry(rationalText.getText());
@@ -46,13 +83,15 @@ public class DistortionAnalysisController {
         return entry;
     }
     
-    private void updateProfile(JournalEntry newEntry) {
-        File saveFile = ProfileUtility.getSaveFile();
+    private void updateProfile(JournalEntry entry) {
         try {
-            if(!saveFile.exists()) {
-                ProfileUtility.createProfile(saveFile);
-            }
-            ProfileUtility.addJournalEntry(newEntry, saveFile);
+        	File saveFile = ProfileUtility.getSaveFile();
+        	if(editMode) {
+        		ProfileUtility.updateJournalEntry(entry, saveFile);
+        	}
+        	else {
+        		ProfileUtility.addJournalEntry(entry, saveFile);
+        	}
         }
         catch (JAXBException e) {
             e.printStackTrace();
@@ -63,5 +102,14 @@ public class DistortionAnalysisController {
         automaticText.clear();
         distortionsText.clear();
         rationalText.clear();
+    }
+    
+    private void loadJournalsView() throws IOException {
+        distortionAnalysisAnchorPane.getChildren().clear();
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Journals.fxml"));
+        AnchorPane jounralPane = (AnchorPane) loader.load();
+        
+        distortionAnalysisAnchorPane.getChildren().add(jounralPane);
     }
 }

@@ -75,7 +75,7 @@ public class ChecklistController {
     @FXML
     private AnchorPane checklistAnchorPane;
     
-    public void loadResults() throws IOException{
+    public void loadResults(){
         ArrayList<ToggleGroup> radioButtons = new ArrayList<>(25);
         ToggleGroup[] radioList = new ToggleGroup[]{radio1,radio2,radio3,radio4,radio5,radio6,radio7,
         radio8,radio9,radio10,radio11,radio12,radio13,radio14,radio15,radio16,radio17,radio18,radio19,radio20,
@@ -83,7 +83,13 @@ public class ChecklistController {
         radioButtons.addAll(Arrays.asList(radioList));
         
         int totalScore = getTotalScore(radioButtons);
-        loadResultScene(totalScore);
+        
+        try {
+        	loadResultScene(totalScore);
+        }
+        catch (IOException e) {
+        	e.printStackTrace();
+        }
         
         ChecklistScore newScore = createNewScore(totalScore);
         saveScoreToProfile(newScore);
@@ -107,7 +113,7 @@ public class ChecklistController {
     private void loadResultScene(int totalScore) throws IOException {
         checklistAnchorPane.getChildren().clear();
         
-        //prepare next scene
+        //prepare next scene by getting result controller and calling function to set results
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ChecklistResults.fxml"));
         AnchorPane resultPane = (AnchorPane) loader.load();
         ChecklistResultsController resultController = loader.getController();
@@ -124,12 +130,9 @@ public class ChecklistController {
     }
     
     private void saveScoreToProfile(ChecklistScore newScore){
-                
-        File saveFile = ProfileUtility.getSaveFile();
+                        
         try {
-            if(!saveFile.exists()) {
-                ProfileUtility.createProfile(saveFile);
-            }
+        	File saveFile = ProfileUtility.getSaveFile();
             ProfileUtility.addChecklistScore(newScore, saveFile);
         }
         catch (JAXBException e) {

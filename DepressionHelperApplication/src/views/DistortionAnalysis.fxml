@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="812.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DistortionAnalysisController">
+<AnchorPane id="AnchorPane" fx:id="distortionAnalysisAnchorPane" prefHeight="680.0" prefWidth="812.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DistortionAnalysisController">
     <stylesheets>
         <URL value="@/application/application.css" />
     </stylesheets>
@@ -38,6 +38,6 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="saveBtn" layoutX="677.0" layoutY="635.0" mnemonicParsing="false" onAction="#saveEntry" text="Save to Journal" />
+      <Button fx:id="saveBtn" layoutX="702.0" layoutY="635.0" mnemonicParsing="false" onAction="#saveEntry" text="Save to Journal" />
    </children>
 </AnchorPane>
