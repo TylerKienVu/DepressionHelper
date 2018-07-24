@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "JournalEntry")
 public class JournalEntry {
     private Date date;
+    private String name;
     private String autoEntry;
     private String distortionEntry;
     private String rationalEntry;
@@ -24,6 +25,15 @@ public class JournalEntry {
     @XmlAttribute
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getName() {
+    	return this.name;
+    }
+    
+    @XmlAttribute
+    public void setName(String name) {
+    	this.name = name;
     }
     
     public String getAutoEntry() {

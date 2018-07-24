@@ -7,12 +7,14 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MultipleSelectionModel;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import javax.xml.bind.JAXBException;
@@ -37,6 +39,7 @@ public class JournalController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
+        	setDoubleClickListener();
             loadJournalEntries();
         } catch (JAXBException e) {
             e.printStackTrace();
@@ -45,8 +48,10 @@ public class JournalController implements Initializable{
     
     public void loadSelectedJournal() {
     	try {
-    		JournalEntry entry = getSelectedJournal();
-    		loadDistortionAnalysisEditView(entry);
+    		if(isSelected()) {
+    			JournalEntry entry = getSelectedJournal();
+    			loadDistortionAnalysisEditView(entry);
+    		}
     	}
     	catch (Exception e) {
     		e.printStackTrace();
@@ -55,10 +60,12 @@ public class JournalController implements Initializable{
     
     public void deleteSelectedJournal() {
     	try {
-			JournalEntry entry = getSelectedJournal();
-			File saveFile = ProfileUtility.getSaveFile();
-			ProfileUtility.deleteJournalEntry(entry,saveFile);
-			loadJournalEntries();
+    		if(isSelected()) {
+    			JournalEntry entry = getSelectedJournal();
+    			File saveFile = ProfileUtility.getSaveFile();
+    			ProfileUtility.deleteJournalEntry(entry,saveFile);
+    			loadJournalEntries();
+    		}			
 		} 
     	catch (Exception e) {
 			e.printStackTrace();
@@ -66,17 +73,27 @@ public class JournalController implements Initializable{
     }
     
     public void loadNewJournalEntry() {
-        journalsAnchorPane.getChildren().clear();
-        
+        journalsAnchorPane.getChildren().clear();        
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/DistortionAnalysis.fxml"));
-        AnchorPane entryPane;
 		
         try {
-			entryPane = (AnchorPane) loader.load();
+			AnchorPane entryPane = (AnchorPane) loader.load();        
+			DistortionAnalysisController entryController = loader.getController();
+	        entryController.enableBackButton();
+			
 			journalsAnchorPane.getChildren().add(entryPane);
+			journalsAnchorPane.requestFocus();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+    }
+    
+    private boolean isSelected() {
+    	MultipleSelectionModel<String> listModel = entriesListView.getSelectionModel();
+    	if (listModel.getSelectedItem() != null) {
+    		return true;
+    	}
+    	return false;
     }
     
     private void loadJournalEntries() throws JAXBException {
@@ -86,7 +103,18 @@ public class JournalController implements Initializable{
         
         if (entriesList != null) {
         	for(JournalEntry entry : entriesList){
-                entriesToImport.add(entry.getDate().toString());
+        		
+        		//handle displaying the names of the journal entries
+        		String journalEntryName = entry.getName();
+        		String journalEntryDate = entry.getDate().toString();
+        		String stringToImport;
+        		if (journalEntryName == null) {
+        			stringToImport = String.format("%s - %s","Untitled", journalEntryDate);
+        		}
+        		else {
+        			stringToImport = String.format("%s - %s", journalEntryName, journalEntryDate);
+        		}
+                entriesToImport.add(stringToImport);
             }
         }
     }
@@ -101,16 +129,37 @@ public class JournalController implements Initializable{
         entryController.importJournal(entry);
         
         journalsAnchorPane.getChildren().add(entryPane);
+        journalsAnchorPane.requestFocus();
     }
     
     private JournalEntry getSelectedJournal() throws Exception {
     	MultipleSelectionModel<String> listModel = entriesListView.getSelectionModel();
-    	String selectedJournalDate = listModel.getSelectedItem();
+    	String selectedJournalDate = stripJournalName(listModel.getSelectedItem());
     	for(JournalEntry entry : entriesList) {
     		if(entry.getDate().toString().equals(selectedJournalDate)) {
     			return entry;
     		}
     	}
-    	throw new Exception("Selected journal not found");
+    	throw new Exception("Nothing is selected");
+    }
+    
+    private String stripJournalName(String journalEntryName) {
+    	int indexOfDash = journalEntryName.indexOf('-');
+    	if (indexOfDash == -1) {
+    		return journalEntryName;
+    	}
+    	return journalEntryName.substring(indexOfDash + 2); 
+    }
+    
+    private void setDoubleClickListener() {
+    	entriesListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent click) {
+				if (click.getClickCount() == 2) {
+					loadSelectedJournal();
+				}
+			}
+    	});
     }
 }

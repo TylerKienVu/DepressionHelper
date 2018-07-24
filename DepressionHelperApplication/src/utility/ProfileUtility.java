@@ -156,6 +156,7 @@ public class ProfileUtility {
     }
     
     private static JournalEntry copyJournal(JournalEntry original, JournalEntry toCopy) {
+    	original.setName(toCopy.getName());
     	original.setAutoEntry(toCopy.getAutoEntry());
     	original.setDistortionEntry(toCopy.getDistortionEntry());
     	original.setRationalEntry(toCopy.getRationalEntry());
