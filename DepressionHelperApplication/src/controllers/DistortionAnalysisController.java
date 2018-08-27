@@ -25,6 +25,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import javax.xml.bind.JAXBException;
 
@@ -39,6 +42,8 @@ public class DistortionAnalysisController implements Initializable{
     
     @FXML 
     private Button saveBtn;
+    @FXML
+    private Button openDistortionsBtn;
     @FXML
     private TextArea automaticText;
     @FXML
@@ -73,10 +78,11 @@ public class DistortionAnalysisController implements Initializable{
         updateProfile(entry);
         clearEntry();
         try {
-			loadJournalsView();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+            loadJournalsView();
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
     public void importJournal(JournalEntry entry) {
@@ -101,6 +107,29 @@ public class DistortionAnalysisController implements Initializable{
 		});
     	
     	distortionAnalysisAnchorPane.getChildren().add(backBtn);
+    }
+    
+    public void openDistortionsWindow() {
+        try {
+            //Load root window
+            Parent root = FXMLLoader.load(getClass().getResource("/views/Distortions.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+
+            //Gives focus to root window
+            root.requestFocus();
+
+            //Setup Stage
+            Stage distortionsStage = new Stage();
+            distortionsStage.setTitle("Distortions");
+            distortionsStage.setResizable(false);
+            distortionsStage.setScene(scene);
+            distortionsStage.sizeToScene();
+            distortionsStage.show();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
     private void displayImportedJournal(JournalEntry entry) {
@@ -191,6 +220,7 @@ public class DistortionAnalysisController implements Initializable{
 			public void handle(KeyEvent event) {
 				if (event.getCode() == KeyCode.TAB) {
 					distortionsText.requestFocus();
+                                        event.consume();
 				}
 			}
     	});
@@ -200,6 +230,17 @@ public class DistortionAnalysisController implements Initializable{
 			public void handle(KeyEvent event) {
 				if (event.getCode() == KeyCode.TAB) {
 					rationalText.requestFocus();
+                                        event.consume();
+				}
+			}
+    	});
+        
+        rationalText.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent event) {
+				if (event.getCode() == KeyCode.TAB) {
+					automaticText.requestFocus();
+                                        event.consume();
 				}
 			}
     	});

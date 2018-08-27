@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="checklistAnchorPane" prefHeight="680.0" prefWidth="812.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChecklistController">
+<AnchorPane id="AnchorPane" fx:id="checklistAnchorPane" prefHeight="740.0" prefWidth="812.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChecklistController">
    <children>
       <Label layoutX="34.0" layoutY="23.0" prefHeight="82.0" prefWidth="439.0" text="Instructions: Select either 0 - 4 for each row to indicate how much you have experienced each symptom during the past week, including today. Please answer all 25 items." wrapText="true">
          <padding>
@@ -47,7 +47,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ScrollPane hbarPolicy="NEVER" layoutX="34.0" layoutY="124.0" prefHeight="480.0" prefWidth="752.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="34.0" layoutY="124.0" prefHeight="558.0" prefWidth="752.0">
          <content>
             <VBox prefHeight="677.0" prefWidth="732.0">
                <children>
@@ -1477,6 +1477,6 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Button fx:id="submitBtn" layoutX="718.0" layoutY="625.0" mnemonicParsing="false" onAction="#loadResults" text="Submit" />
+      <Button fx:id="submitBtn" layoutX="734.0" layoutY="701.0" mnemonicParsing="false" onAction="#loadResults" text="Submit" />
    </children>
 </AnchorPane>

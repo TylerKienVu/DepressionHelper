@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="812.0" stylesheets="@../application/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controllers.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="812.0" stylesheets="@../application/application.css" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" fx:controller="controllers.DashboardController">
    <children>
       <ScatterChart fx:id="scatterChart" layoutX="156.0" layoutY="100.0">
         <xAxis>

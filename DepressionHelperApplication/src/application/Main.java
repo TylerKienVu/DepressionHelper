@@ -30,6 +30,7 @@ public class Main extends Application {
         primaryStage.setTitle("DepressionHelperApplication");
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
+        primaryStage.sizeToScene();
         primaryStage.show();
         
     }

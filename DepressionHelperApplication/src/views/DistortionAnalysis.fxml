@@ -63,5 +63,6 @@
             </Label>
          </children>
       </VBox>
+      <Button fx:id="openDistortionsBtn" layoutX="271.0" layoutY="61.0" mnemonicParsing="false" onAction="#openDistortionsWindow" text="Open List of Distortions" />
    </children>
 </AnchorPane>
