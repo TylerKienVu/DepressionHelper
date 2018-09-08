@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class UserProfile {
     private JournalEntries journalEntries;
     private ChecklistScores checklistScores;
+    private PleasurePredictionSheets pleasurePredictionSheets;
     
     public JournalEntries getJournalEntries() {
         return this.journalEntries;
@@ -28,5 +29,14 @@ public class UserProfile {
     @XmlElement(name = "ChecklistScores")
     public void setChecklistScores(ChecklistScores checklistScores) {
         this.checklistScores = checklistScores;
+    }
+    
+    public PleasurePredictionSheets getPleasurePredictionSheets() {
+        return this.pleasurePredictionSheets;
+    }
+    
+    @XmlElement(name = "PleasurePredictionSheets")
+    public void setPleasurePredictionSheets(PleasurePredictionSheets pleasurePredictionSheets) {
+        this.pleasurePredictionSheets = pleasurePredictionSheets;
     }
 }

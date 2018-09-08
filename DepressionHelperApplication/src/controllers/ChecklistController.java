@@ -120,6 +120,7 @@ public class ChecklistController {
         resultController.setLabels(totalScore);
         
         checklistAnchorPane.getChildren().add(resultPane);
+        checklistAnchorPane.requestFocus();
     }
     
     private ChecklistScore createNewScore(int totalScore) {

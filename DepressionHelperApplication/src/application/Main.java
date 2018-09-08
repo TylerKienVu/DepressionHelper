@@ -1,10 +1,13 @@
 package application;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import utility.ProfileUtility;
 
 /**
@@ -31,6 +34,12 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
+        
+        //Closes all windows if this main window closes
+        primaryStage.setOnCloseRequest((WindowEvent event) -> {
+            Platform.exit();
+        });
+        
         primaryStage.show();
         
     }

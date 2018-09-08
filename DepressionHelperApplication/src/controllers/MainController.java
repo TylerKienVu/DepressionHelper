@@ -60,6 +60,12 @@ public class MainController implements Initializable{
         contentAnchorPane.getChildren().add(newLoadedPane);
     }
     
+    public void loadPleasurePrediction() throws IOException {
+        contentAnchorPane.getChildren().clear();
+        AnchorPane newLoadedPane = FXMLLoader.load(getClass().getResource("/views/PleasurePrediction.fxml"));
+        contentAnchorPane.getChildren().add(newLoadedPane);
+    }
+    
     public void openDistortionsWindow() {
         try {
             //Load root window

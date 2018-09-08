@@ -1,0 +1,5 @@
+### 9/8/18 ###
+- Added models for pleasure prediction sheets
+- Need to implement updating profiles with new models
+	- ProfileUtility.checkProfileForUpdates()
+		- Used in ProfileUtility.getSaveFile()

@@ -76,7 +76,7 @@
                   </Separator>
                   <Button fx:id="checklistBtn" mnemonicParsing="false" onAction="#loadChecklist" prefHeight="62.0" prefWidth="148.0" text="Burn's Depression Checklist" textAlignment="CENTER" wrapText="true">
                      <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                        <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="14.0" />
@@ -84,11 +84,19 @@
                   </Button>
                   <Button fx:id="distortionAnalysisBtn" mnemonicParsing="false" onAction="#loadDistortionAnalysis" prefHeight="62.0" prefWidth="148.0" text="Distortion Thought Analysis" textAlignment="CENTER" wrapText="true">
                      <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                        <Insets top="10.0" />
                      </VBox.margin>
                      <font>
                         <Font size="14.0" />
                      </font>
+                  </Button>
+                  <Button fx:id="pleasurePredictionBtn" mnemonicParsing="false" onAction="#loadPleasurePrediction" prefHeight="62.0" prefWidth="148.0" text="Pleasure Prediction" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </Button>
                </children>
             </VBox>

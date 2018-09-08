@@ -11,6 +11,8 @@ import models.ChecklistScore;
 import models.ChecklistScores;
 import models.JournalEntries;
 import models.JournalEntry;
+import models.PleasurePredictionSheet;
+import models.PleasurePredictionSheets;
 import models.UserProfile;
 
 /**
@@ -20,15 +22,19 @@ import models.UserProfile;
 public class ProfileUtility {
     public static void createProfile(File saveFile) throws JAXBException {
         
+        //If adding more models, initialize objects here for the profile
+        
         //Initialize Objects
         UserProfile profile = new UserProfile();
         JournalEntries entries = new JournalEntries();
         ChecklistScores scores = new ChecklistScores();
+        PleasurePredictionSheets sheets = new PleasurePredictionSheets();
         
         //Set objects
-        profile.setChecklistScores(scores);
         profile.setJournalEntries(entries);
-        
+        profile.setChecklistScores(scores);
+        profile.setPleasurePredictionSheets(sheets);
+                
         updateProfile(profile,saveFile);
     }
     
@@ -101,6 +107,10 @@ public class ProfileUtility {
         updateProfile(profile, saveFile);
     }
     
+    public static void addPleasurePredictionSheet(PleasurePredictionSheet newSheet, File saveFile) {
+        
+    }
+    
     public static void createSavePath() {
         String path = System.getProperty("user.home") + "\\.depressionhelper\\";
         if (!new File(path).exists()){
@@ -114,6 +124,7 @@ public class ProfileUtility {
     		createSavePath();
     		createProfile(saveFile);
     	}
+        checkProfileForUpdates(saveFile);
         return saveFile;
     }
     
@@ -162,5 +173,9 @@ public class ProfileUtility {
     	original.setRationalEntry(toCopy.getRationalEntry());
     	original.setDate(toCopy.getDate());
     	return original;
+    }
+    
+    private static void checkProfileForUpdates(File saveFile) {
+        //not implemented
     }
 }

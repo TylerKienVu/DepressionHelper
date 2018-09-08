@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/controllers/DashboardController.java</file>
             <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/controllers/MainController.java</file>
-            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/utility/ProfileUtility.java</file>
+            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/controllers/JournalController.java</file>
             <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/application/Main.java</file>
-            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/controllers/DistortionAnalysisController.java</file>
+            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/controllers/PleasurePredictionController.java</file>
+            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/views/PleasurePrediction.fxml</file>
+            <file>file:/C:/Users/tyler/Documents/GitHub/DepressionHelper/DepressionHelperApplication/src/controllers/ChecklistController.java</file>
         </group>
     </open-files>
 </project-private>

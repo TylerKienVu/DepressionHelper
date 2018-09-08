@@ -60,16 +60,16 @@ public class JournalController implements Initializable{
     
     public void deleteSelectedJournal() {
     	try {
-    		if(isSelected()) {
-    			JournalEntry entry = getSelectedJournal();
-    			File saveFile = ProfileUtility.getSaveFile();
-    			ProfileUtility.deleteJournalEntry(entry,saveFile);
-    			loadJournalEntries();
-    		}			
-		} 
+            if(isSelected()) {
+                JournalEntry entry = getSelectedJournal();
+                File saveFile = ProfileUtility.getSaveFile();
+                ProfileUtility.deleteJournalEntry(entry,saveFile);
+                loadJournalEntries();
+            }			
+	} 
     	catch (Exception e) {
-			e.printStackTrace();
-		}
+            e.printStackTrace();
+	}
     }
     
     public void loadNewJournalEntry() {
